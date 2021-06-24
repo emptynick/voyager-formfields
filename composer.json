@@ -1,0 +1,25 @@
+{
+    "name": "emptynick/voyager-formfields",
+    "description": "Demonstrates all formfields in Voyager II",
+    "keywords": ["voyager2-plugin", "voyager", "formfields", "demo"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christoph Schweppe",
+            "email": "info@cschweppe.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Emptynick\\Formfields\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Emptynick\\Formfields\\FormfieldsServiceProvider"
+            ]
+        }
+    }
+}

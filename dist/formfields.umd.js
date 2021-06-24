@@ -1,0 +1,1 @@
+!function(n){"function"==typeof define&&define.amd?define(n):n()}((function(){"use strict";const n={data:()=>({})};n.render=function(n,e,o,t,f,i){return" Hello "},voyager.component("formfields",n)}));
