@@ -11,8 +11,6 @@ class FormfieldsServiceProvider extends ServiceProvider
     public function boot(PluginManager $pluginmanager)
     {
         $pluginmanager->addPlugin(\Emptynick\Formfields\Formfields::class);
-        $this->loadTranslationsFrom(realpath(__DIR__.'/../resources/lang'), 'formfields');
-        Voyager::addTranslations('formfields', 'formfields');
     }
 
     public function register()
