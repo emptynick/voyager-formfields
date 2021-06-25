@@ -12,10 +12,11 @@ export default defineConfig({
             fileName: 'formfields'
         },
         rollupOptions: {
-            external: ['vue'],
+            external: ['vue', 'axios'],
             output: {
                 globals: {
-                    vue: 'Vue'
+                    vue: 'Vue',
+                    axios: 'axios'
                 }
             }
         }
