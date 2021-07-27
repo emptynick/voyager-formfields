@@ -1,5 +1,5 @@
 <template>
-    <card title="Formfields">
+    <Card title="Formfields">
         <div class="w-full inline-flex space-x-1 mb-4">
             <button class="button accent" v-for="f in formfields" :key="`button-${f.formfield.type}`" v-scrollTo="`formfield-${f.formfield.type}`">
                 {{ f.formfield.name }}
@@ -17,7 +17,7 @@
                 </select>
             </div>
         </template>
-        <collapsible v-for="f in formfields" :key="f.formfield.type" :title="f.formfield.name" :titleSize="5" :id="`formfield-${f.formfield.type}`">
+        <Collapsible v-for="f in formfields" :key="f.formfield.type" :title="f.formfield.name" :titleSize="5" :id="`formfield-${f.formfield.type}`">
             <template #actions>
                 <div class="inline-flex space-x-1">
                     <slide-in :title="__('voyager::generic.options')">
@@ -58,7 +58,7 @@
                     </slide-in>
                 </div>
             </template>
-            <card no-header>
+            <Card no-header>
                 <component
                     v-if="action == 'browse'"
                     :is="f.formfield.component"
@@ -75,11 +75,11 @@
                     :action="action"
                     v-model="f.value"
                 />
-            </card>
+            </Card>
             
             <textarea class="input w-full mt-2" :value="JSON.stringify(f.value, null, 2)"></textarea>
-        </collapsible>
-    </card>
+        </Collapsible>
+    </Card>
 </template>
 
 <script>
