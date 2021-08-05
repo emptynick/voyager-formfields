@@ -76,7 +76,9 @@ class Formfields implements GenericPlugin, ProtectedRoutes, MenuItems, JS
         $formfields = [];
         $breadmanager = resolve(BreadManager::class);
 
-        $breadmanager->getFormfields()->each(function ($formfield) use (&$formfields, $breadmanager, $action) {
+        $breadmanager->getFormfields()->filter(function ($formfield) {
+            return $formfield['type'] !== 'relationship';
+        })->each(function ($formfield) use (&$formfields, $breadmanager, $action) {
             $add = $breadmanager->getFormfield($formfield['type'])->add();
             $set = $this->preferences->get($formfield['type'].'_value', 'NO_VALUE', false);
             $value = null;
