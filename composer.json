@@ -21,5 +21,8 @@
                 "Emptynick\\Formfields\\FormfieldsServiceProvider"
             ]
         }
+    },
+    "require": {
+        "voyager-admin/voyager": "2.x-dev"
     }
 }
